@@ -3,9 +3,14 @@ const express = require('express');
 const {json} = require('body-parser');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 // Creates app
 const app = express();
+
+// Enables CORS
+app.use(cors());
+app.options('*', cors());
 
 // Gets enviroment variables
 require('dotenv/config');
