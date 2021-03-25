@@ -7,11 +7,11 @@ const router = express.Router();
 // GET
 // All products
 router.get('/', async (req, res) => {
-	const productList = await Product.find().populate('category');
-	if (!productList) {
+	const products = await Product.find().populate('category');
+	if (!products) {
 		return res.status(500).json({success: false});
 	}
-	res.status(200).send(productList);
+	res.status(200).send(products);
 });
 
 // Product by id
@@ -23,9 +23,45 @@ router.get('/:id', async (req, res) => {
 	res.status(200).send(product);
 });
 
+// Number of products
+router.get('/count', async (req, res) => {
+	const productCount = await Product.countDocuments((count) => count);
+	if (!productCount) {
+		return res.status(500).json({success: false});
+	}
+	res.status(200).send({
+		productCount: productCount,
+	});
+});
+
+// Features products
+router.get('/featured/:count', async (req, res) => {
+	const count = req.params.count ? req.params.count : 0;
+	const products = await Product.find({isFeatured: true})
+		.populate('category')
+		.limit(parseInt(count));
+	if (!products) {
+		return res.status(500).json({success: false});
+	}
+	res.status(200).send(products);
+});
+
+// Product by category
+router.get('/', async (req, res) => {
+	let categories = {};
+	if (req.query.categories) {
+		categories = {category: req.query.categories.split(',')};
+	}
+	const products = await Product.find(categories).populate('category');
+	if (!products) {
+		return res.status(500).json({success: false});
+	}
+	res.status(200).send(products);
+});
+
 // POST
 router.post('/', async (req, res) => {
-	const category = await Category.findOne({name: req.body.category});
+	const category = await Category.find({name: req.body.category});
 	if (!category) {
 		return res.status(500).send('Indalid category');
 	}
@@ -85,7 +121,7 @@ router.put('/:category_id', async (req, res) => {
 // DELETE
 router.delete('/:id', async (req, res) => {
 	try {
-		const product= await Product.findByIdAndRemove(req.params.id);
+		const product = await Product.findByIdAndRemove(req.params.id);
 		if (product) {
 			res.status(200).json({
 				success: true,

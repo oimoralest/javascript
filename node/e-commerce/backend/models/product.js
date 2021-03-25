@@ -62,5 +62,14 @@ const productSchema = mongoose.Schema({
 	},
 });
 
+// Exporting _id also as id
+productSchema.virtual('id').get(function () {
+	return this._id.toHexString();
+});
+
+productSchema.set('toJSON', {
+	virtual: true,
+});
+
 // Exporting
 exports.Product = mongoose.model('Product', productSchema);
