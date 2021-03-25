@@ -13,4 +13,13 @@ const categorySchema = mongoose.Schema({
 	},
 });
 
+// Exporting _id also as id
+categorySchema.virtual('id').get(function () {
+	return this._id.toHexString();
+});
+
+categorySchema.set('toJSON', {
+	virtual: true,
+});
+
 exports.Category = mongoose.model('Category', categorySchema);
