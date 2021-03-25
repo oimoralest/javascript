@@ -24,7 +24,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // Number of products
-router.get('/count', async (req, res) => {
+router.get('/get/count', async (req, res) => {
 	const productCount = await Product.countDocuments((count) => count);
 	if (!productCount) {
 		return res.status(500).json({success: false});
@@ -35,8 +35,8 @@ router.get('/count', async (req, res) => {
 });
 
 // Features products
-router.get('/featured/:count', async (req, res) => {
-	const count = req.params.count ? req.params.count : 0;
+router.get('/get/featured/', async (req, res) => {
+	const count = req.query.count ? req.query.count : 0;
 	const products = await Product.find({isFeatured: true})
 		.populate('category')
 		.limit(parseInt(count));
@@ -61,7 +61,7 @@ router.get('/', async (req, res) => {
 
 // POST
 router.post('/', async (req, res) => {
-	const category = await Category.find({name: req.body.category});
+	const category = await Category.findOne({name: req.body.category});
 	if (!category) {
 		return res.status(500).send('Indalid category');
 	}
@@ -73,7 +73,7 @@ router.post('/', async (req, res) => {
 		images: req.body.images,
 		brand: req.body.brand,
 		price: req.body.price,
-		category: category._id,
+		category: category.id,
 		countInStock: req.body.countInStock,
 		rating: req.body.rating,
 		numReviews: req.body.numReviews,
@@ -87,8 +87,8 @@ router.post('/', async (req, res) => {
 });
 
 // PUT
-router.put('/:category_id', async (req, res) => {
-	const category = await Category.findById(req.params.category_id);
+router.put('/:id', async (req, res) => {
+	const category = await Category.findOne({name: req.body.category});
 	if (!category) {
 		return res.status(500).send('Indalid category');
 	}
@@ -102,7 +102,7 @@ router.put('/:category_id', async (req, res) => {
 			images: req.body.images,
 			brand: req.body.brand,
 			price: req.body.price,
-			category: req.params.category_id,
+			category: category.id,
 			countInStock: req.body.countInStock,
 			rating: req.body.rating,
 			numReviews: req.body.numReviews,

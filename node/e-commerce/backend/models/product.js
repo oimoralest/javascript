@@ -68,7 +68,7 @@ productSchema.virtual('id').get(function () {
 });
 
 productSchema.set('toJSON', {
-	virtual: true,
+	virtuals: true,
 });
 
 // Exporting
