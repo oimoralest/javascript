@@ -1,9 +1,15 @@
+// Gets enviroment variables
+require('dotenv/config');
+const api = process.env.API_URL;
+
 // Importing
 const express = require('express');
 const {json} = require('body-parser');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const authJwt = require('./helpers/jwt');
+const errorHandler = require('./helpers/error-handler');
 
 // Creates app
 const app = express();
@@ -12,13 +18,12 @@ const app = express();
 app.use(cors());
 app.options('*', cors());
 
-// Gets enviroment variables
-require('dotenv/config');
-const api = process.env.API_URL;
 
 // Middleware
 app.use(json());
 app.use(morgan('tiny'));
+app.use(authJwt())
+app.use(errorHandler)
 
 // Routes
 const productsRouter = require('./routes/products');
