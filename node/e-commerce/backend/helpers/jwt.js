@@ -9,6 +9,7 @@ function authJwt() {
 		isRevoked: isRevoked,
 	}).unless({
 		path: [
+			{url: RegExp(`${api}/public/uploads/*`), methods: ['GET', 'OPTIONS']},
 			{url: RegExp(`${api}/products/*`), methods: ['GET', 'OPTIONS']},
 			{url: RegExp(`${api}/categories/*`), methods: ['GET', 'OPTIONS']},
 			`${api}/users/login`,
@@ -19,9 +20,9 @@ function authJwt() {
 
 async function isRevoked(req, payload, done) {
 	if (!payload.isAdmin) {
-		done(null, true)
+		done(null, true);
 	}
-	done()
+	done();
 }
 
 module.exports = authJwt;
