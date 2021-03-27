@@ -18,12 +18,12 @@ const app = express();
 app.use(cors());
 app.options('*', cors());
 
-
 // Middleware
 app.use(json());
 app.use(morgan('tiny'));
-app.use(authJwt())
-app.use(errorHandler)
+app.use(authJwt());
+app.use('/public/uploads', express.static(__dirname + '/public/uploads'))
+app.use(errorHandler);
 
 // Routes
 const productsRouter = require('./routes/products');
