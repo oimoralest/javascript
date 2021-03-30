@@ -1,8 +1,12 @@
-# javascript
+# JavaScript
+
 ## Description
+
   This repo is about javascript projects
+
 ## Content
+
 | Project | Description |
 | --- | --- |
 | [drawingAnimations](./drawingAnimations) | This project is about drawing animations with JS |
-| [node](./node) | Projects created in node |
+| [express](./express) | Projects created in express |
