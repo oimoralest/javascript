@@ -15,9 +15,9 @@
 ### expressServer.js
 
 To run just type in terminal\
-    ```nodemon expressServer.js```
-You can do any request type with postman, curl or similar software\
-    ```curl localhost:80/``` You can change the server port
+    ```nodemon expressServer.js```\
+You can do any request type with Postman, curl or similar software\
+    ```curl -X GET localhost:80/``` You can change the server port
 
 ## References
 
