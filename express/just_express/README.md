@@ -8,6 +8,7 @@
 
 - [Project issues](./project_issues): Issues had during the development of the project with its respectively solutions (If there was)
 - [before_express](./before_express): Introduction topics before to start with express
+- [express-101](./express-101): Introduction to express
 
 ## Requirements
 
@@ -17,4 +18,6 @@
 
 ## References
 
-1. [How to install node in ubuntu](https://github.com/nodesource/distributions/blob/master/README.md)
+1. [Just express Udemy course](https://www.udemy.com/course/just-express-with-a-bunch-of-node-and-http-in-detail/)
+2. [How to install node in ubuntu](https://github.com/nodesource/distributions/blob/master/README.md)
+3. [How to install express](https://expressjs.com/en/starter/installing.html)
