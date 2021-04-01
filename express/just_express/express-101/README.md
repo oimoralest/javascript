@@ -62,7 +62,7 @@ To run just type in your terminal
 
     nodemon staticFiles.js
 Next, you can open in your browser the following URL:\
-http://localhost:80/images/huawei.jpeg
+<http://localhost:80/images/huawei.jpeg>
 
 ## References
 
