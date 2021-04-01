@@ -8,7 +8,7 @@
 
 | File | Description | Usage |
 | --- | --- | --- |
-| [expressServer.js](expressServer.js) | Server created with express module | nodemon expressServer.js (Also see: [Usage expressServer](#expressServer.js)) |
+| [expressServer.js](expressServer.js) | Server created with express module | nodemon expressServer.js (See more: [Usage expressServer](#expressServer.js)) |
 | [expressRouting.js](expressRouting.js) | Knowing how to create routes with express | nodemon expressRouting.js (See more: [Usage expressRouting](#expressRouting.js)) |
 
 ## Usage
