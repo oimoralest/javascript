@@ -1,0 +1,46 @@
+# Express 201
+
+## Description
+
+    Learning about Middleware and Rendering!
+
+## Content
+
+| File | Description | Usage |
+| --- | --- | --- |
+|[appUse.js](./appUse.js)| Knowing how to use middlewares in express | See: [Usage appUse.js](#appUse.js) |
+| [helmetAndOthers](helmetAndOthers.js) | Knowing how to decode content type to create json content type | See: [Usage helmetAndOthers.js](#helmetAndOthers.js) |
+
+## Usage
+
+Note: In this scripts I use the port 80 because I work with docker containers publishing the 8080 port of my host with the 80 port of the docker container. However, you can change this port in the scripts
+
+### appUse.js
+
+To run just type in your terminal
+
+    nodemon appUse.js
+
+#### GET request
+
+There are two route availables
+
+    curl -X GET localhost:80
+    curl -X GET localhost:80/admin
+
+### helmetAndOthers.js
+
+To run just type in your terminal
+
+    nodemon helmetAndOther.js
+Next, you can open in your browser the following URL:\
+<http://localhost:80/ajax.html>\
+You can see the logs in your terminal
+
+## References
+
+1. [Middleware](http://expressjs.com/en/guide/using-middleware.html#using-middleware): Express is a routing and middleware web framework
+2. [locals property](http://expressjs.com/en/5x/api.html#res.locals): Exposes request-level information
+3. [json](http://expressjs.com/en/4x/api.html#express.json): Built-in middleware
+4. [urlencoded](http://expressjs.com/en/5x/api.html#express.urlencoded): Built-in middleware
+5. [helmet](http://expressjs.com/en/advanced/best-practice-security.html#use-helmet): Helps to protect your app from some well-known web vulnerabilities by setting HTTP headers appropriately
