@@ -9,6 +9,7 @@
 - [Project issues](./project_issues): Issues had during the development of the project with its respectively solutions (If there was)
 - [before_express](./before_express): Introduction topics before to start with express
 - [express-101](./express-101): Introduction to express
+- [express-201](./express-201): Introduction to middleware and rendering
 
 ## Requirements
 
