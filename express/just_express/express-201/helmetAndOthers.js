@@ -1,4 +1,4 @@
-// This script defines a POST method to an html file that makes a POST request
+ // This script defines a POST method to an html file that makes a POST request
 // with encoded content
 
 // Importing
@@ -21,7 +21,7 @@ app.use(express.urlencoded({extended: false}));
 // POST
 app.post('/ajax', (req, res) => {
 	console.log(req.body.name);
-	res.send('That was a POST request');
+	res.json('That was a POST request');
 });
 
 // Running the server
