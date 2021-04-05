@@ -43,4 +43,9 @@ You can see the logs in your terminal
 2. [locals property](http://expressjs.com/en/5x/api.html#res.locals): Exposes request-level information
 3. [json](http://expressjs.com/en/4x/api.html#express.json): Built-in middleware
 4. [urlencoded](http://expressjs.com/en/5x/api.html#express.urlencoded): Built-in middleware
-5. [helmet](http://expressjs.com/en/advanced/best-practice-security.html#use-helmet): Helps to protect your app from some well-known web vulnerabilities by setting HTTP headers appropriately
+5. [static](http://expressjs.com/en/5x/api.html#express.static): Built-in middleware
+6. [helmet](http://expressjs.com/en/advanced/best-practice-security.html#use-helmet): Helps to protect your app from some well-known web vulnerabilities by setting HTTP headers appropriately
+7. [What is JSON](https://en.wikipedia.org/wiki/JSON): Open standard file format and data interchange format
+8. [json method](http://expressjs.com/en/api.html#res.json): Sends a JSON response
+9. [set method](http://expressjs.com/en/api.html#app.set): Assigns setting name to value (See [Application Settings Table](http://expressjs.com/en/api.html#app.settings.table))
+10. [Template engines](https://expressjs.com/en/resources/template-engines.html): Different template engines that you could use to rendering with express
