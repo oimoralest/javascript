@@ -10,6 +10,8 @@
 | --- | --- | --- |
 |[appUse.js](./appUse.js)| Knowing how to use middlewares in express | See: [Usage appUse.js](#appUse.js) |
 | [helmetAndOthers](helmetAndOthers.js) | Knowing how to decode content type to create json content type | See: [Usage helmetAndOthers.js](#helmetAndOthers.js) |
+| [rendering.js](./rendering.js) | Knowing how to rendering html content with express | See [Usage rendering.js](#rendering.js) |
+| [ejsPractice.js](./ejsPractice.js) | Practicing ejs view | See [Usage ejsPractice.js](#ejsPractice.js) |
 
 ## Usage
 
@@ -28,6 +30,8 @@ There are two route availables
     curl -X GET localhost:80
     curl -X GET localhost:80/admin
 
+Also you can use your web browser and visit the two routes
+
 ### helmetAndOthers.js
 
 To run just type in your terminal
@@ -35,6 +39,26 @@ To run just type in your terminal
     nodemon helmetAndOther.js
 Next, you can open in your browser the following URL:\
 <http://localhost:80/ajax.html>\
+You can see the logs in your terminal
+
+### rendering.js
+
+To run just type in your terminal
+
+    nodemon rendering.js
+Next, you can open in your browser the following URL:\
+<http://localhost:80/>\
+You can see the logs in your terminal
+
+Note: Maybe you have to edit the [index.ejs](views/index.ejs) file in [views](./views) folder, deleting the h2 and h3 tags
+
+### ejsPractice.js
+
+To run just type in your terminal
+
+    nodemon ejsPracice.js
+Next, you can open in your browser the following URL:\
+<http://localhost:80/>\
 You can see the logs in your terminal
 
 ## References
