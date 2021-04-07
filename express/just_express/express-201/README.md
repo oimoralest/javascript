@@ -6,12 +6,12 @@
 
 ## Content
 
-| File | Description | Usage |
-| --- | --- | --- |
-|[appUse.js](./appUse.js)| Knowing how to use middlewares in express | See: [Usage appUse.js](#appUse.js) |
-| [helmetAndOthers](helmetAndOthers.js) | Knowing how to decode content type to create json content type | See: [Usage helmetAndOthers.js](#helmetAndOthers.js) |
-| [rendering.js](./rendering.js) | Knowing how to rendering html content with express | See [Usage rendering.js](#rendering.js) |
-| [ejsPractice.js](./ejsPractice.js) | Practicing ejs view | See [Usage ejsPractice.js](#ejsPractice.js) |
+| File | Description |
+| --- | --- |
+|[appUse.js](./appUse.js)| Knowing how to use middlewares in express |
+| [helmetAndOthers](helmetAndOthers.js) | Knowing how to decode content type to create json content type |
+| [rendering.js](./rendering.js) | Knowing how to rendering html content with express |
+| [ejsPractice.js](./ejsPractice.js) | Practicing ejs view |
 
 ## Usage
 

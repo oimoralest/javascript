@@ -6,10 +6,18 @@
 
 ## Content
 
-| File | Description |Usage|
-| --- | --- | --- |
+| File | Description |
+| --- | --- |
 | [nodeServer.js](./nodeServer.js) | server created with http module for educational purposes | nodemon nodeServer |
-| [static](./static) | Folder created for static content | N/A |
+| [static](./static) | Folder created for static content |
+
+## Usage
+
+### nodeServer.js
+
+To run just type in your termimnal
+
+    nodemon nodeServer.js
 
 ## References
 

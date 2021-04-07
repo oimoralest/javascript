@@ -6,11 +6,11 @@
 
 ## Content
 
-| File | Description | Usage |
-| --- | --- | --- |
-| [expressServer.js](expressServer.js) | Server created with express module | nodemon expressServer.js (See more: [Usage expressServer](#expressServer.js)) |
-| [expressRouting.js](expressRouting.js) | Knowing how to create routes with express | nodemon expressRouting.js (See more: [Usage expressRouting](#expressRouting.js)) |
-| [staticFiles.js](staticFiles.js) | Knowing how to server static files with express | nodemon staticFiles.js (See more: [Usage staticFiles](#staticFiles.js)) |
+| File | Description |
+| --- | --- |
+| [expressServer.js](expressServer.js) | Server created with express module |
+| [expressRouting.js](expressRouting.js) | Knowing how to create routes with express |
+| [staticFiles.js](staticFiles.js) | Knowing how to server static files with express |
 
 ## Usage
 
