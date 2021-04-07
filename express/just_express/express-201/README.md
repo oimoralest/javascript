@@ -12,6 +12,8 @@
 | [helmetAndOthers](helmetAndOthers.js) | Knowing how to decode content type to create json content type |
 | [rendering.js](./rendering.js) | Knowing how to rendering html content with express |
 | [ejsPractice.js](./ejsPractice.js) | Practicing ejs view |
+| [public](./public/) | Folder created to serve public content |
+| [views](./views) | Folder created to serve the ejs views |
 
 ## Usage
 

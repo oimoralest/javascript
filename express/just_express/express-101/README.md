@@ -11,6 +11,7 @@
 | [expressServer.js](expressServer.js) | Server created with express module |
 | [expressRouting.js](expressRouting.js) | Knowing how to create routes with express |
 | [staticFiles.js](staticFiles.js) | Knowing how to server static files with express |
+| [public](./public/) | Folder created to serve public content |
 
 ## Usage
 
