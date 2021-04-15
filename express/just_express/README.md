@@ -10,12 +10,8 @@
 - [before_express](./before_express): Introduction topics before to start with express
 - [express-101](./express-101): Introduction to express
 - [express-201](./express-201): Introduction to middleware and rendering
-
-## Requirements
-
-- node v15.12.0
-- express v4.17.1
-- nodemon v2.0.7
+- [express-301](./express-301): Learning about req, res, revisited, the router, the express generator and HTTP headers
+- [package.json](./package.json): Useful to install all the dependencies used in this project (npm install)
 
 ## References
 

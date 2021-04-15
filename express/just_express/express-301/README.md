@@ -2,15 +2,46 @@
 
 ## Description
 
-    Learning about req, res, revisited, the router, and the express generator
+    Learning about req, res, revisited, the router, the express generator and
+    HTTP headers
 
 ## Content
 
 | File | Description |
 | --- | --- |
-|||
+| [loginSite.js](./loginSite.js) | This file creates an express app to server a Login site |
+| [routerApp.js](./routerApp.js) | This file creates an express app to use the two Routers defined in routers folder |
 
 ## Usage
+
+**Note**: While running any of both files, you web browser should ask to you for SSL certificate. You can see reference [14](#references) to generate self-signed SSL certificates.
+
+### loginSite.js
+
+To run just type in your terminal:
+
+    nodemon loginSite.js
+
+There are the following endpoints availables:
+
+| Endpoint | Description |
+| --- | --- |
+| <http://localhost/> | Home page |
+| <http://localhost/login> | Login page |
+
+The other routes defined in this file are available while interacting with the login Page
+
+### routerApp.js
+
+To run just type in your terminal:
+
+    nodemon routerApp.js
+
+There are two endpoint availables:
+| Endpoint | Description |
+| --- | --- |
+| <http://localhost/> | Router 1 that returns a HTTP message with json content type |
+| <http://localhost/user> | Router 2 that returns other HTTP message with json content type |
 
 ## References
 
