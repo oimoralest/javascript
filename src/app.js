@@ -31,7 +31,8 @@ app.use(express.urlencoded({extended: false}));
 app.set('views', process.cwd() + '/views');
 app.set('view engine', 'pug');
 
-
+// ROUTERS
+app.use('/', homeRouter);
 
 // Running the server
 https
