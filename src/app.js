@@ -10,9 +10,9 @@ import {readFileSync} from 'fs';
 const host = process.env.APP_HOST;
 const port = process.env.APP_PORT;
 const apiKey = process.env.API_KEY;
-const apiBaseUrl = 'http://api.themoviedb.org/3';
+const apiBaseUrl = process.env.API_BASE_URL;
 const nowPlayingUrl = `${apiBaseUrl}/movie/now_playing?api_key=${apiKey}`;
-const imageBaseUrl = 'http://image.tmdb.org/t/p/w300';
+const imageBaseUrl = process.env.IMG_BASE_URL;
 
 // Creating app
 const app = express();
