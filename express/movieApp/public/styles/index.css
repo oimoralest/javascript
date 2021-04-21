@@ -1,0 +1,19 @@
+h1.index-title {
+	padding: 10px;
+	text-align: center;
+	font-size: xx-large;
+	text-shadow: 2px;
+}
+
+div.home-movie {
+	border: solid #fcd34d 2px;
+	border-radius: 5px;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+div.home-movie:hover {
+	background-color: rgba(0,0,0,1);
+	border: solid #fcd34d 6px;
+}
