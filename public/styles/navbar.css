@@ -1,24 +1,31 @@
 img.img-navbar {
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
+	width: 40px;
+	height: 40px;
+	margin-left: 10px;
 }
 
-h1.page-tittle {
-    margin-left: 10px;
+b.page-tittle {
+	margin-left: 10px;
 }
 
-input.input-navbar, button.button-navbar {
-    margin-right: 10px;
-    border: solid #fcd34d 1px;
-    border-radius: 5px;
-    padding: 5px;
+b.filter,
+select.filter,
+input.input-navbar,
+button.button-navbar {
+	margin-right: 10px;
+	border: solid #fcd34d 1px;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+input.input-navbar {
+	width: 200px;
 }
 
 input.input-navbar:focus {
-    border: slategrey solid 1px;
+	border: rgba(0, 0, 0, 0.7) solid 4px;
 }
 
-button.button-navbar:hover{
-    background-color: #fbbf24;
+button.button-navbar:hover {
+	background-color: #fbbf24;
 }
