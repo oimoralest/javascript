@@ -1,0 +1,70 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+h1.movie-title {
+	padding: 10px;
+	text-align: center;
+	font-size: xx-large;
+	text-shadow: 2px;
+}
+
+div.movie-container {
+	min-height: calc(100% - 58px - 48px - 68px);
+    display: flex;
+    flex-flow: column wrap;
+}
+
+div.movie {
+	padding: 10px;
+	border: solid #fcd34d 2px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: flex-start;
+    background-color: white;
+}
+
+div.movie-description {
+	margin-left: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.companies {
+    margin: 10px;
+    width: 100%;
+    text-align: center;
+    align-self: end;
+}
+
+div.companies-logo {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.companies-logo img, div.companies-logo b {
+    height: 10%;
+    width: 10%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+div.moreInfo {
+    margin: auto;
+    text-align: center;
+}
+
+button.info-btn {
+    background-color: #fcd34d;
+    padding: 10px;
+    border: solid 1px #fbbf24;
+    border-radius: 5px;
+}
+
+button.info-btn:hover {
+    background-color: #fbbf24;
+}
