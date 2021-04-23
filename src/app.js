@@ -5,6 +5,11 @@ import 'dotenv/config.js';
 import homeRouter from '../routes/home.js';
 import https from 'https';
 import {readFileSync} from 'fs';
+import movieRouter from '../routes/movie.js';
+import {imagesPolicy} from '../middlewares/contentSecurityPolicy.js';
+import {imageBaseURL} from '../middlewares/imageBaseUrl.js';
+import cors from 'cors';
+import cookieParser from 'cookie-parser';
 
 // CONSTANTS
 const host = process.env.APP_HOST;
@@ -23,6 +28,9 @@ app.use(express.static('public'));
 // Protecting app
 app.use(helmet());
 
+// Enabling cors
+app.use(cors());
+
 // Parsing http content
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
@@ -31,8 +39,14 @@ app.use(express.urlencoded({extended: false}));
 app.set('views', process.cwd() + '/views');
 app.set('view engine', 'pug');
 
+// Middlewares
+app.use(imagesPolicy);
+app.use(imageBaseURL);
+app.use(cookieParser());
+
 // ROUTERS
 app.use('/', homeRouter);
+app.use('/movie/', movieRouter);
 
 // Running the server
 https
