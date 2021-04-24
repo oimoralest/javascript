@@ -1,16 +1,15 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<h1>POST page</h1>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 	const ourRequest = $.ajax({
 		method: 'POST',
-		url: 'http://192.168.99.101:8080/ajax',
+		url: 'http://localhost:80/ajax',
 		dataType: 'json',
 		data: {
 			name: 'Rob',
 		},
 	});
-	ourRequest.then((response, statusCode, xmlhttp) => {
+	ourRequest.then((response, statusCode, xmlhtpp) => {
 		console.log(response);
-		console.log(xmlhttp);
+		console.log(xmlhtpp);
 	});
 </script>
