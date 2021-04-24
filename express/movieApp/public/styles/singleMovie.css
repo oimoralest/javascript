@@ -1,0 +1,79 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+h1.movie-title {
+	padding: 10px;
+	text-align: center;
+	font-size: 50px;
+    font-family: "movieTitleFont";
+}
+
+div.movie-container {
+	min-height: calc(100% - 48px - 95px - 58px);
+    display: flex;
+    flex-flow: column wrap;
+}
+
+div.movie {
+	padding: 10px;
+	border: solid #fcd34d 2px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#movie-picture {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.movie-description {
+	margin: 10px;
+    margin-bottom: 20px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+div.companies {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    align-self: end;
+}
+
+div.companies-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+div.companies-logo img, div.companies-logo b {
+    height: 10%;
+    width: 10%;
+    margin: 20px;
+}
+
+div.moreInfo {
+    margin: auto;
+    text-align: center;
+}
+
+button.info-btn {
+    margin-top: 10px;
+    background-color: #fcd34d;
+    padding: 10px;
+    border: solid 1px #fbbf24;
+    border-radius: 5px;
+}
+
+button.info-btn:hover {
+    background-color: #fbbf24;
+}

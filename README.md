@@ -1,12 +1,12 @@
-# MovieFanApp
+# JavaScript
 
 ## Description
 
+  This repo is about javascript projects
+
 ## Content
 
-## Usage
-
-## References
-
-1. [Tailwind](https://tailwindcss.com/): A utility-first CSS framework packed with classes
-2. [Pug](https://pugjs.org/api/getting-started.html): Pug is a high-performance template engine heavily influenced by Haml and implemented with JavaScript for Node.js and browsers
+| Project | Description |
+| --- | --- |
+| [drawingAnimations](./drawingAnimations) | This project is about drawing animations with JS |
+| [express](./express) | Projects created in express |

@@ -1,0 +1,12 @@
+include head
+include navbar
+h1(class="index-title container mx-auto")= `${title}`
+div(class="movies-container grid gap-4 grip-flow-col sm:grid-cols-4 container mx-auto")
+    each movie in movies.results
+        div(class="home-movie shadow-lg")
+            a(href=`/movie/${movie.id}`)
+                if movie.poster_path
+                    img(src=`${imageBaseUrl}${movie.poster_path}` alt="movie picture")
+                else
+                    img(src='/img/movie.png')
+include footer
