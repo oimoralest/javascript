@@ -1,35 +1,40 @@
 include head
 include navbar
 h1(class="movie-title container mx-auto")= movie.title
-div(class="movie-container")
-    div(class="movie container mx-auto")
-        if movie.poster_path
-            img(src=`${imageBaseUrl}${movie.poster_path}`, alt="movie image")
-        else
-            img(src='/img/movie.png')
+div(class="movie-container container mx-auto")
+    div(class="movie shadow-lg")
+        div(id="movie-picture")
+            if movie.poster_path
+                img(src=`${imageBaseUrl}${movie.poster_path}`, alt="movie image")
+            else
+                img(src='/img/movie.png')
         div(class="movie-description")
             div
-                p
-                    b Original title: 
-                    = movie.original_title
-                p
-                    b Overview: 
-                    = movie.overview
-                p
-                    b Genres: 
-                    each genre in movie.genres
-                        = genre.name + ' '
-                p
-                    b Release date: 
-                    = movie.release_date
-                if movie.homepage !== ''
+                if movie.original_title
+                    p
+                        b Original title: 
+                        = movie.original_title
+                if movie.overview
+                    p
+                        b Overview: 
+                        = movie.overview
+                if movie.genres.length > 0
+                    p
+                        b Genres: 
+                        each genre in movie.genres
+                            = genre.name + ' '
+                if movie.release_date
+                    p
+                        b Release date: 
+                        = movie.release_date
+                if movie.homepage
                     p
                         b Movie page: 
                         a(href=`${movie.homepage}`)= movie.homepage
             if movie.production_companies.length > 0
                 div(class="companies")
                     b Companies
-                    div(class="companies-logo")
+                    div(class="companies-logo ")
                         each company in movie.production_companies
                             if company.logo_path
                                 img(src=`${imageBaseUrl}${company.logo_path}`)
