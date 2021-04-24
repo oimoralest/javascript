@@ -1,12 +1,12 @@
 @font-face {
 	font-family: "movieTitleFont";
-	src: url("/fonts/scream-real.regular-webfont.woff") format('woff');
+	src: url("/fonts/sfhollywoodhills-webfont.woff") format('woff');
 }
 
 h1.index-title {
 	padding: 10px;
 	text-align: center;
-	font-size: xx-large;
+	font-size: 80px;
 	font-family: "movieTitleFont";
 }
 
