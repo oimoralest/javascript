@@ -23,8 +23,8 @@ movieRouter.get('/:id', async (req, res, next) => {
 
 movieRouter.post('/search', (req, res, next) => {
 	try {
-		res.cookie('search', encodeURI(req.body.termSearch));
-		res.redirect(`/movie/search/${req.body.filter}`);
+		const search = encodeURI(req.body.termSearch);
+		res.redirect(`/movie/search/${req.body.filter}?search=${search}`);
 	} catch {
 		res.render('notFound');
 	}
@@ -32,23 +32,40 @@ movieRouter.post('/search', (req, res, next) => {
 
 movieRouter.get('/search/movie', async (req, res, next) => {
 	try {
-		const search = req.cookies.search;
+		const search = req.query.search;
 		const resp = await axios.get(
 			`${apiBaseUrl}/search/movie?query=${search}&api_key=${apiKey}`,
 		);
 		if (resp.status !== 200) {
-			throw 'Error'
+			throw 'Error';
 		}
 		res.render('index', {
 			title: `Results by ${search}`,
 			movies: resp.data,
-			imageBaseUrl: res.locals.imageBaseUrl
-		})
+			imageBaseUrl: res.locals.imageBaseUrl,
+		});
 	} catch {
 		res.render('notFound');
 	}
 });
 
-
+movieRouter.get('/search/person', async (req, res, next) => {
+	try {
+		const search = req.query.search;
+		const resp = await axios.get(
+			`${apiBaseUrl}/search/person?query=${search}&api_key=${apiKey}`,
+		);
+		if (resp.status !== 200) {
+			throw 'Error';
+		}
+		res.render('actors', {
+			title: `Results by ${search}`,
+			actors: resp.data,
+			imageBaseUrl: res.locals.imageBaseUrl,
+		});
+	} catch {
+		res.render('notFound');
+	}
+});
 
 export default movieRouter;
