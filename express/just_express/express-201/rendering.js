@@ -22,6 +22,7 @@ app.set('view engine', 'ejs');
 
 // Get request
 app.get('/', (req, res) => {
+	// This renders index.ejs file in views folder
 	res.render('index');
 });
 

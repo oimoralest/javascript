@@ -25,7 +25,7 @@ app.get('/', (req, res) => {
 	// The second argument is appended to res.locals
 	res.render('index', {
 		msg: 'Succes!',
-		msg2: 'Or Failure?'
+		msg2: 'Or Failure?',
 	});
 });
 
