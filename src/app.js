@@ -3,8 +3,6 @@ import express from 'express';
 import helmet from 'helmet';
 import 'dotenv/config.js';
 import homeRouter from '../routes/home.js';
-import https from 'https';
-import {readFileSync} from 'fs';
 import movieRouter from '../routes/movie.js';
 import {imagesPolicy} from '../middlewares/contentSecurityPolicy.js';
 import {imageBaseURL} from '../middlewares/imageBaseUrl.js';
@@ -12,12 +10,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 
 // CONSTANTS
-const host = process.env.APP_HOST;
-const port = process.env.APP_PORT;
-const apiKey = process.env.API_KEY;
-const apiBaseUrl = process.env.API_BASE_URL;
-const nowPlayingUrl = `${apiBaseUrl}/movie/now_playing?api_key=${apiKey}`;
-const imageBaseUrl = process.env.IMG_BASE_URL;
+const port = process.env.PORT || 80;
 
 // Creating app
 const app = express();
@@ -49,14 +42,6 @@ app.use('/', homeRouter);
 app.use('/movie/', movieRouter);
 
 // Running the server
-https
-	.createServer(
-		{
-			key: readFileSync('key.pem'),
-			cert: readFileSync('cert.pem'),
-		},
-		app,
-	)
-	.listen(port, host, () => {
-		console.log(`Server running on ${host}:${port}`);
-	});
+app.listen(port, () => {
+	console.log(`Server running on port ${port}`);
+});
