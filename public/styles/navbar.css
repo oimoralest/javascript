@@ -4,11 +4,24 @@ img.img-navbar {
 	margin-left: 10px;
 }
 
-b.page-tittle {
-	margin-left: 10px;
+nav {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
-b.filter,
+div.home {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+b.page-tittle {
+	margin-left: 10px;
+	font-family: "movieTitleFont";
+}
+
+n.filter,
 select.filter,
 input.input-navbar,
 button.button-navbar {
