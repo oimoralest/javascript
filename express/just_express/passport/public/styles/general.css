@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+    background-color: rgb(6, 160, 6);
+}
+
+.container {
+    min-height: calc(100% - 86.49px - 86.49px - 16px - 20px);
+    min-width: 80%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
