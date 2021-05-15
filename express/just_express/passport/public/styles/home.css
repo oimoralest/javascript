@@ -1,0 +1,34 @@
+.buttons-container {
+  min-height: 20%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttons-container button {
+  min-height: 40px;
+  min-width: 150px;
+  border-radius: 5px;
+  color: whitesmoke;
+}
+
+#login-facebook {
+  background-color: rgb(6, 77, 184);
+  border: none;
+}
+
+#login-facebook:hover {
+  background-color: rgb(0, 16, 87);
+  box-shadow: 0 0 4px rgb(41, 83, 62);
+}
+
+#login-github {
+  background-color: rgb(0, 0, 0);
+  border: none;
+}
+
+#login-github:hover {
+  background-color: rgb(59, 59, 59);
+  box-shadow: 0 0 4px rgb(41, 83, 62);
+}

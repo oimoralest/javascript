@@ -6,7 +6,11 @@
     "dependencies": {
         "dotenv": "^8.6.0",
         "express": "^4.16.4",
+        "express-session": "^1.17.1",
         "helmet": "^4.6.0",
+        "passport": "^0.4.1",
+        "passport-facebook": "^3.0.0",
+        "passport-github": "^1.1.0",
         "pug": "^3.0.2"
     }
 }
