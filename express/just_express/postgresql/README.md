@@ -1,8 +1,8 @@
-# Postgresql 
+# Postgresql
 
 ## Description
 
-This project is about how to connect postgres with an express app using pg (Just fro )
+This project is about how to connect postgres with an express app using pg (Just for connection)
 
 ## Requirements
 
@@ -24,6 +24,7 @@ All the requeriments are listed on package.json
     PSQL_PORT=database_port
     APP_PORT=express_app_port
 ```
+
 3. Install the requeriments running in your terminal:
 
 ```bash
@@ -47,7 +48,10 @@ All the requeriments are listed on package.json
 ```JavaScript
     app.get('Any_link', (req,res) => {
         pool.query('SQL STATEMENT', (err, dbResponse) => {
-            res.json(dbResponse)
+            if (err) {
+                res.json(err);
+            }
+            res.json(dbResponse);
         })
     })
 ```
