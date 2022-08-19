@@ -1,0 +1,92 @@
+Sigue las instrucciones muy cuidadosamente!
+
+INSTALAR
+Se requiere tener instalado nodejs con una versión > 12.0
+Despues de tener instalado nodejs corre el siguiente comando para instalar las
+dependencias necesarias:
+
+npm install
+
+Ahora estas listo(a) para realizar los ejercicios
+
+PROBLEMAS:
+
+1. Es positivo o negativo
+    Dentro de esta carpeta encontrarás un archivo llamado positivoNegativo.js,
+    el cual contiene la función positivoNegativo que recibe como parametro un
+    número. Completa esta función para que pueda imprimir el número y lo siguiente:
+        - Si el número es mayor que cero: es positivo
+        - Si el numero es igual a cero: es cero
+        - Si el número es menor que cero: es negativo
+
+    ej:
+        positivoONegativo(4) debe imprimir "4 es positivo"
+
+    Para validar tu función debe ejecutar el siguiente comando:
+
+    npm test -- positivoNegativo.test.js
+
+    Si los tests pasan, puedes continuar con el siguiente ejercicio
+
+2. Ultimo digito
+    Dento de esta carpeta encontrarás un archivo llamado ultimoDigito.js, el cual
+    contiene la funcion ultimoDigito que recibe como parametro un número.
+    Completa esta funcion para que pueda lo siguiente:
+    2.1 El ultimo digito de
+    2.2 <numero>
+    2.3 es
+    2.4 <ultimo digito>
+    2.5 si
+        2.5.1 <ultimo digito> es mayor a 5: y es mayor a 5
+        2.5.2 <ultimo digito> es 0: y es 0
+        2.5.3 <ultimo digito> es menor a 6 y no es 0: y es menor a 6 y no es 0
+
+    ej:
+        ultimoDigito(57832518) debe imprimir "El ultimo digito de 57832518 es 8 y es mayor a 5
+
+    Para validar tu función debe ejecutar el siguiente comando:
+
+    npm test -- ultimoDigito.test.js
+
+    Si los tests pasan, puedes continuar con el siguiente ejercicio
+
+3. Numeros naturales ?
+    Dentro de esta carpeta encontrarás un archivo llamado numerosNaturales.js, el
+    cual contiene la funcion numerosNaturales la cual debe imprimir los numero
+    naturales en una sola linea excepto el 4 y 7.
+
+    ej:
+        numerosNaturales() debe imprimir "01235689"
+
+    Para validar tu función debe ejecutar el siguiente comando:
+
+    npm test -- numerosNaturales.test.js
+
+    Si los tests pasan, puedes continuar con el siguiente ejercicio
+
+4. Naturales numeros
+    Dentro de esta carpeta encontrarás un archivo llamado naturalesNumeros.js, el
+    cual contiene la funcion naturalesNumeros la cual debe imprimir los numeros
+    naturales en orden inverso.
+
+    ej:
+        naturalesNumeros() debe imprimir "9876543210"
+
+    Para validar tu función debe ejecutar el siguiente comando:
+
+    npm test -- naturalesNumeros.test.js
+
+    Si los tests pasan, puedes continuar con el siguiente ejercicio
+
+5. Posibles combinaciones de 2 digitos
+    Dentro de esta carpeta encontrarás un archivo llamado posiblesDosDigitos.js, el
+    cual contiene la funcion posiblesDosDigitos la cual debe imprimir todas las
+    posibles combinaciones de dos digitos separados por una coma.
+
+    ej:
+        posiblesDosDigitos() debe imprimir
+        01, 02, 03, 04, 05, 06, 07, 08, 09, 12, 13, 14, 15, 16, 17, 18, 19, 23, 24, 25, 26, 27, 28, 29, 34, 35, 36, 37, 38, 39, 45, 46, 47, 48, 49, 56, 57, 58, 59, 67, 68, 69, 78, 79, 89
+
+    Para validar tu función debe ejecutar el siguiente comando:
+
+    npm test -- posiblesDosDigitos.test.js

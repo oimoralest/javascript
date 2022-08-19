@@ -1,0 +1,5 @@
+En cada carpeta encontraras un archivo "instrucciones.txt" con las instrucciones
+necesarias para entrenarte en JavaScript
+
+Contenido:
+1_variables_y_condiciones: descripción
